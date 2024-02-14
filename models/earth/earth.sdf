@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+<model name="earth">
+  <static>true</static>
+  <link name="earth_link">
+
+  <visual name="earth">
+    <pose>0 0 0 0 0 0</pose>
+    <geometry>
+      <mesh><uri>model://earth/meshes/earth.dae</uri><scale>1 1 1</scale></mesh>
+    </geometry>
+  </visual>
+
+  <collision name="earth">
+    <pose>0 0 0 0 0 0</pose>
+    <geometry>
+      <mesh><uri>model://earth/meshes/earth.stl</uri><scale>1 1 1</scale></mesh>
+    </geometry>
+  </collision>
+
+  </link>
+</model>
+</sdf>
