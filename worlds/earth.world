@@ -1,6 +1,16 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
   <world name="default">
+    <scene>
+      <ambient>0.8 0.8 0.8 1</ambient>
+      <background>0.8 0.8 0.8 1</background>
+      <shadows>1</shadows>
+      <sky>
+        <clouds>
+          <speed>5</speed>
+        </clouds>
+      </sky>
+    </scene>
 
     <!-- A global light source -->
     <include>
