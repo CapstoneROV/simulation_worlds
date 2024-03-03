@@ -44,6 +44,7 @@
   <!--   <buildtool_depend>catkin</buildtool_depend> -->
   <!-- Use exec_depend for packages you need at runtime: -->
   <!--   <exec_depend>message_runtime</exec_depend> -->
+  <exec_depend>gazebo_ros</exec_depend>
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <!-- Use doc_depend for packages you need only for building documentation: -->
@@ -54,8 +55,11 @@
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->
-    <gazebo_ros plugin_path="${prefix}/lib"/>
-    <gazebo_ros gazebo_media_path="${prefix}/worlds"/>
+    <!-- Important: this requires two things:
+      - Install DIRECTORY models in CMakeLists https://github.com/ros-simulation/gazebo_ros_pkgs/blob/84a088be9bfcba4f8dda29eb52265c112dd808d2/gazebo_ros/scripts/gazebo_ros_paths.py
+      - <exec_depend> on gazebo_ros (run_depend on older versions) https://answers.ros.org/question/399211/problems-loading-models-in-gazebo/
+    -->
+    <gazebo_ros gazebo_media_path="${prefix}/models"/>
     <gazebo_ros gazebo_model_path="${prefix}/models"/>
   </export>
 </package>

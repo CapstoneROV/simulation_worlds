@@ -187,6 +187,9 @@ include_directories(
 #   # myfile2
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
+install(DIRECTORY models
+  DESTINATION share/${PROJECT_NAME}
+)
 
 #############
 ## Testing ##
